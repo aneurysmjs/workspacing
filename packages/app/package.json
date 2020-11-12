@@ -1,0 +1,9 @@
+{
+  "name": "@wsp/app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "commit": "../../scripts/commit.sh"
+  }
+}
