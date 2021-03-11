@@ -1,0 +1,10 @@
+{
+  "name": "@wsp/commit",
+  "version": "1.0.0",
+  "license": "MIT",
+  "bin": "./commit.js",
+  "dependencies": {
+    "commitizen": "4.2.2",
+    "cz-conventional-changelog": "3.3.0"
+  }
+}

@@ -5,5 +5,8 @@
   "license": "MIT",
   "scripts": {
     "commit": "../../scripts/commit.sh"
+  },
+  "dependencies": {
+    "@wsp/utils": "1.0.0"
   }
 }

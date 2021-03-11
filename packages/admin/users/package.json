@@ -1,0 +1,11 @@
+{
+  "name": "@wsp/admin-users",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "commit": "npx lerna exec -- node \\$LERNA_ROOT_PATH/scripts/commit.sh",
+    "check-env": "node -e 'console.log($LERNA_ROOT_PATH)' | grep lerna",
+    "env": "echo $LERNA_ROOT_PATH"
+  }
+}

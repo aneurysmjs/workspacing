@@ -1,0 +1,14 @@
+{
+  "name": "@wsp/admin-commands",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "../../../../node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,1 +1,3 @@
-console.log('from main')
+const utils = require('@wsp/utils')
+
+console.log('utils', utils)

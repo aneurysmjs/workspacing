@@ -1,0 +1,26 @@
+{
+  "name": "workspacing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jero <aneurysmjs@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "new-version": "lerna version --conventional-commits --yes",
+    "bootstrap-hoist": "lerna bootstrap --hoist"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "ramda": "0.27.1",
+    "react": "17.0.1"
+  },
+  "devDependencies": {
+    "commitizen": "4.2.2",
+    "cz-conventional-changelog": "3.3.0",
+    "lerna": "3.22.1"
+  }
+}
