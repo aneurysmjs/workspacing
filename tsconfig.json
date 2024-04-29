@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM", "ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "types": ["node", "@testing-library/jest-dom", "vitest", "vite/client"],
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "composite": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
