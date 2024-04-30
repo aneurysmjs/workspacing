@@ -1,0 +1,10 @@
+import type { FunctionComponent } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import {{ suffixMe (pascalCase routeName) 'Page' }} from '@/modules/{{camelCase componentModule}}/pages/{{pascalCase routeName}}Page';
+
+export const {{pascalCase routeName}}Router: FunctionComponent = () => (
+  <Routes>
+    <Route element={<{{pascalCase routeName}}Page />} path="/{{camelCase routeName}}" />
+  </Routes>
+);

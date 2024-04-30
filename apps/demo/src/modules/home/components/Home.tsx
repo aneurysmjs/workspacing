@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 import './Home.css';
 
 const Home: FunctionComponent = () => {
-  return <section className="home">home</section>;
+  return <div className="home">home</div>;
 };
 
 export default Home;

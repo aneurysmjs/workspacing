@@ -1,15 +1,12 @@
 import { FunctionComponent } from 'react';
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 
-import Layout from '@/components/common/Layout';
-import Home from '@/pages/Home';
+import HomeRoutes from '@/modules/home/routes/HomeRoutes';
 
 const Routing: FunctionComponent = () => (
   <Router>
     <Routes>
-      <Route element={<Layout />} path="/">
-        <Route index element={<Home />} />
-      </Route>
+      <Route path="/*" element={<HomeRoutes />} />
     </Routes>
   </Router>
 );

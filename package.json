@@ -4,10 +4,12 @@
   "main": "index.js",
   "author": "аневризма <aneurysmjs@outlook.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "commit": "git-cz",
     "dev": "pnpm --dir apps/demo -- dev",
-    "build": "pnpm --dir apps/demo -- build"
+    "build": "pnpm --dir apps/demo -- build",
+    "generate": "plop --plopfile config/plop/plop.config.js"
   },
   "config": {
     "commitizen": {
@@ -46,6 +48,7 @@
     "eslint-plugin-prettier": "5.1.3",
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-react-hooks": "4.6.2",
+    "plop": "^4.0.1",
     "prettier": "3.2.5",
     "stylelint": "16.4.0",
     "stylelint-config-prettier": "9.0.5",
