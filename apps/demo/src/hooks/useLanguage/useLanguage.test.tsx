@@ -1,4 +1,4 @@
-import { describe, it, beforeEach, expect, vi } from 'vitest';
+import { describe, it, beforeEach, expect } from '@jest/globals';
 import { renderHook, act } from '@testing-library/react';
 
 import useLanguage from './useLanguage';
@@ -48,7 +48,7 @@ describe('useLanguage', () => {
   });
 
   it('should call `callback` after language change', async () => {
-    const onLangChangedSpy = vi.fn();
+    const onLangChangedSpy = jest.fn();
 
     expect(localStorage.getItem('i18nextLng')).toBeNull();
 

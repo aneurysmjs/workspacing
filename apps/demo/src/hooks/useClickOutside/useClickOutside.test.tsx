@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from '@jest/globals';
 import { FunctionComponent, useRef } from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 
@@ -21,7 +21,7 @@ const ClickOutside: FunctionComponent<Props> = ({ onClick }) => {
  */
 describe('useClickOutside', () => {
   it('should call onClick() when clicking outside', () => {
-    const onClick = vi.fn();
+    const onClick = jest.fn();
     render(<ClickOutside onClick={onClick} />);
 
     fireEvent.mouseDown(document.body);
@@ -30,7 +30,7 @@ describe('useClickOutside', () => {
   });
 
   it('should NOT call onClick() when clicking inside', () => {
-    const onClick = vi.fn();
+    const onClick = jest.fn();
     render(<ClickOutside onClick={onClick} />);
 
     fireEvent.mouseDown(screen.getByText('Click me'));

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 
 // import withUserSetup from '@/utils/testUtils/withUserSetup';
-import { withUserSetup } from '@indtx/utils';
+import { withUserSetup } from '@workspacing/utils';
 import LangsDropdown from './LangsDropdown';
 
 describe('LangsDropdown', () => {
