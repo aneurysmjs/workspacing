@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { act } from '@testing-library/react-hooks';
+import { describe, it, expect } from '@jest/globals';
+import { act } from 'react';
 import { renderHook } from '@testing-library/react';
 
 import useTheme from './useTheme';

@@ -7,6 +7,6 @@ describe('Home', () => {
     const { container } = render(<Home />);
     const div = container.firstChild as HTMLDivElement;
 
-    expect(div.textContent).toEqual('Hme');
+    expect(div.textContent).toEqual('home');
   });
 });

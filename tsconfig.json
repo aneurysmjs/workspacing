@@ -6,7 +6,7 @@
     "moduleResolution": "bundler",
     "sourceMap": true,
     "jsx": "react-jsx",
-    "types": ["node", "@testing-library/jest-dom", "vitest", "vite/client"],
+    "types": ["node", "@testing-library/jest-dom", "jest", "vite/client"],
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "declaration": true,
