@@ -76,7 +76,15 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:jest/recommended',
   ],
-  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import', 'jest'],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+    'import',
+    'jest',
+    'perfectionist',
+  ],
   settings: {
     react: {
       version: 'detect',
@@ -117,7 +125,8 @@ module.exports = {
         devDependencies: true,
       },
     ],
-
+    'perfectionist/sort-interfaces': 'error',
+    'perfectionist/sort-objects': 'error',
     'prettier/prettier': ['error', { singleQuote: true }],
   },
   overrides: [
@@ -133,6 +142,7 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
         'import/no-dynamic-require': 'off',
         'global-require': 'off',
+        'perfectionist/sort-objects': 'off',
       },
     },
   ],
