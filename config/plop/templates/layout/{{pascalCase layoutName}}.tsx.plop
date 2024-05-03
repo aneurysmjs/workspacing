@@ -1,0 +1,13 @@
+import { FunctionComponent } from 'react';
+
+import './{{pascalCase layoutName}}.css';
+
+interface PropsType {}
+
+const {{pascalCase layoutName}}: FunctionComponent<PropsType> = (props) => (
+	<div className="{{camelCase layoutName}}">
+		{{pascalCase layoutName}}
+	</div>
+);
+
+export default {{pascalCase layoutName}};

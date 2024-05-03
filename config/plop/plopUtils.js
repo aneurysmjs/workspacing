@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import paths, { APPS } from '../paths.js';
+import { APPS } from '../paths.js';
 
 /**
  * @typedef {'functional' | 'class'} Role
@@ -39,39 +39,6 @@ export const resolveAppModules = (componentApp) => {
 
   return resolveDirs(appModulesPath);
 };
-
-
-
-/**
- * @function routePath
- * @param {Role} role Routes's role.
- * @return {(ext: Ext) => string} Full component's path with format.
- */
-export const routePath = () => (ext) =>
-  `${paths.src}/routes/{{properCase routeName}}/{{properCase routeName}}.${ext}`;
-
-/**
- * @function setTemplatePath
- * @param {Ext} ext
- * @returns {string} Full template's path with format.
- */
-export const setTemplatePath = (ext) =>
-  `${paths.pathPlopTemplates}/component/component.${ext}.plop`;
-
-/**
- * @function setRoutePath
- * @returns {string} Full route's path with format.
- */
-export const setRoutePath = () => `${paths.pathPlopTemplates}/route/route.tsx.plop`;
-
-/**
- * @param {ComponentType} type
- * @return {(answers: Answers) => boolean} componentType
- */
-export const checkComponentType =
-  (type) =>
-  ({ componentType }) =>
-    componentType === type;
 
 /**
  * @param {string[]} choices
