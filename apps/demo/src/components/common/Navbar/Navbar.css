@@ -1,5 +1,5 @@
 .navbar {
-  @apply bg-theme
+  @apply theme-bg
   container
   flex
   flex-wrap
@@ -21,7 +21,7 @@
 
 .navbar__container {
   @apply flex items-center justify-between w-full;
-  @apply text-theme;
+  @apply theme-text;
 
   flex-wrap: inherit;
 
@@ -39,7 +39,7 @@
 }
 
 .navbar-brand__title {
-  @apply m-0 text-theme inline font-bold;
+  @apply m-0 theme-text inline font-bold;
 }
 
 .navbar__toggler {
@@ -91,7 +91,7 @@
 }
 
 .navbar-link {
-  @apply text-theme p-2;
+  @apply theme-text p-2;
 
   @media screen(lg) {
     @apply flex-row;
@@ -99,7 +99,7 @@
 }
 
 .navbar-link--active {
-  @apply font-medium text-theme;
+  @apply font-medium theme-text;
 }
 
 .navbar__theme {
@@ -111,7 +111,7 @@
 }
 
 .navbar__switch-theme {
-  @apply text-theme inline;
+  @apply theme-text inline;
 
   @media screen(lg) {
     @apply hidden;

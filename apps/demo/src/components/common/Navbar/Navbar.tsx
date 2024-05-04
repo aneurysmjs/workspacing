@@ -44,9 +44,9 @@ const Navbar: FunctionComponent = () => {
           }}
         >
           {isOpen ? (
-            <FontAwesomeIcon className="text-theme" size="2x" icon={faXmark} />
+            <FontAwesomeIcon className="theme-text" size="2x" icon={faXmark} />
           ) : (
-            <FontAwesomeIcon className="text-theme" size="2x" icon={faBars} />
+            <FontAwesomeIcon className="theme-text" size="2x" icon={faBars} />
           )}
         </button>
         <div className="navbar__actions">
