@@ -1,13 +1,12 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-recommended", "stylelint-config-tailwindcss"],
   "rules": {
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["extends", "tailwind", "mixin", "include", "at-root", "layer", "apply"]
+        "ignoreAtRules": ["apply", "layer", "responsive", "screen", "tailwind", "variants"]
       }
     ],
-    "block-no-empty": null,
-    "selector-class-pattern": null
+    "no-descending-specificity": null
   }
 }

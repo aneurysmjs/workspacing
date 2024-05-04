@@ -183,6 +183,9 @@ importers:
       stylelint-config-standard:
         specifier: 36.0.0
         version: 36.0.0(stylelint@16.4.0(typescript@5.4.5))
+      stylelint-config-tailwindcss:
+        specifier: ^0.0.7
+        version: 0.0.7(stylelint@16.4.0(typescript@5.4.5))(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.17)(@types/node@20.12.8)(typescript@5.4.5)))
       stylelint-prettier:
         specifier: 5.0.0
         version: 5.0.0(prettier@3.2.5)(stylelint@16.4.0(typescript@5.4.5))
@@ -4357,6 +4360,12 @@ packages:
     peerDependencies:
       stylelint: ^16.1.0
 
+  stylelint-config-tailwindcss@0.0.7:
+    resolution: {integrity: sha512-n2dCWH+0ppr0/by4EYCLWW7g5LU+l4UzUIsYS7xbVHqvm9UWa7UhltNdNiz5NmLF/FmbJR4Yd/v9DuUGvLw1Tg==}
+    peerDependencies:
+      stylelint: '>=13.13.1'
+      tailwindcss: '>=2.2.16'
+
   stylelint-prettier@5.0.0:
     resolution: {integrity: sha512-RHfSlRJIsaVg5Br94gZVdWlz/rBTyQzZflNE6dXvSxt/GthWMY3gEHsWZEBaVGg7GM+XrtVSp4RznFlB7i0oyw==}
     engines: {node: '>=18.12.0'}
@@ -4645,34 +4654,6 @@ packages:
       vite: ^4.0.0
     peerDependenciesMeta:
       '@swc/core':
-        optional: true
-
-  vite@5.2.10:
-    resolution: {integrity: sha512-PAzgUZbP7msvQvqdSD+ErD5qGnSFiGOoWmV5yAKUEI0kdhjbH6nMWVyZQC/hSc4aXwc0oJ9aEdIiF9Oje0JFCw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
         optional: true
 
   vite@5.2.11:
@@ -9680,6 +9661,11 @@ snapshots:
       stylelint: 16.4.0(typescript@5.4.5)
       stylelint-config-recommended: 14.0.0(stylelint@16.4.0(typescript@5.4.5))
 
+  stylelint-config-tailwindcss@0.0.7(stylelint@16.4.0(typescript@5.4.5))(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.17)(@types/node@20.12.8)(typescript@5.4.5))):
+    dependencies:
+      stylelint: 16.4.0(typescript@5.4.5)
+      tailwindcss: 3.4.3(ts-node@10.9.2(@swc/core@1.4.17)(@types/node@20.12.8)(typescript@5.4.5))
+
   stylelint-prettier@5.0.0(prettier@3.2.5)(stylelint@16.4.0(typescript@5.4.5)):
     dependencies:
       prettier: 3.2.5
@@ -10039,7 +10025,7 @@ snapshots:
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.11(@types/node@20.12.8)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -10061,16 +10047,6 @@ snapshots:
       '@swc/core': 1.4.17
     transitivePeerDependencies:
       - supports-color
-
-  vite@5.2.10(@types/node@20.12.8):
-    dependencies:
-      esbuild: 0.20.2
-      postcss: 8.4.38
-      rollup: 4.17.2
-    optionalDependencies:
-      '@types/node': 20.12.8
-      fsevents: 2.3.3
-    optional: true
 
   vite@5.2.11(@types/node@20.12.8):
     dependencies:
@@ -10100,7 +10076,7 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.11(@types/node@20.12.8)
       vite-node: 1.6.0(@types/node@20.12.8)
       why-is-node-running: 2.2.2
     optionalDependencies:
