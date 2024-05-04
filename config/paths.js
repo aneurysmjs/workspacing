@@ -17,3 +17,5 @@ export const MODULES = `${APPS}/demo/src/modules`;
 export const PACKAGES = path.resolve(dirname, '../../');
 
 export const TEMPLATES = resolveApp('config/plop/templates');
+
+export const GENERATORS = resolveApp('config/plop/generators');

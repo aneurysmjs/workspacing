@@ -1,0 +1,27 @@
+import { GENERATORS, TEMPLATES } from '../../../paths.js';
+
+/**
+ * @typedef {import('plop').AddActionConfig} AddActionConfig
+ */
+
+/**
+ * @param {Object} answers
+ * @param {string} answers.{{camelCase generatorName}}Name
+ */
+export default function plopActions({{curlyMe (suffixMe (camelCase generatorName) 'Name')}}) {
+  /** @type {Array<AddActionConfig>} */
+  let actions = [
+    {
+      type: 'addMany',
+      base: `${TEMPLATES}/{{camelCase templateName}}`,
+      templateFiles: `${TEMPLATES}/{{camelCase templateName}}/**`,
+      stripExtensions: ['plop'],
+      destination: ``/* HERE YOU ARE IN CHARGE OF SETTING THE DESTINATION!!! */,
+      data: {
+        {{camelCase generatorName}}Name,
+      },
+    },
+  ];
+
+  return actions;
+}

@@ -3,6 +3,7 @@ import componentGenerator from './generators/component/componentGenerator.js';
 import moduleGenerator from './generators/module/moduleGenerator.js';
 import routeGenerator from './generators/route/routeGenerator.js';
 import layoutGenerator from './generators/layout/layoutGenerator.js';
+import generatorGenerator from './generators/generator/generatorGenerator.js';
 
 // console.log('helpers', helpers);
 
@@ -24,4 +25,5 @@ export default function plopFn(plop) {
   plop.setGenerator('module', moduleGenerator);
   plop.setGenerator('route', routeGenerator);
   plop.setGenerator('layout', layoutGenerator);
+  plop.setGenerator('generator', generatorGenerator);
 }

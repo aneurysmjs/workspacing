@@ -1,0 +1,8 @@
+import actions from './{{camelCase generatorName}}Actions.js';
+import prompts from './{{camelCase generatorName}}Prompts.js';
+
+export default {
+  description: 'Make a {{camelCase generatorName}} file for the project',
+  prompts,
+  actions,
+};

@@ -1,0 +1,14 @@
+export default [
+  {
+    type: 'prompt',
+    name: '{{camelCase generatorName}}Name',
+    message: '{{pascalCase generatorName}} name:',
+    async validate(input) {
+      if (input === '') {
+        throw new Error("{{pascalCase generatorName}} name can't be empty");
+      }
+
+      return true;
+    },
+  },
+];
