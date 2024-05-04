@@ -2,12 +2,10 @@ import { FunctionComponent } from 'react';
 
 import './{{pascalCase componentName}}.css';
 
-interface PropsType {}
+interface {{pascalCase componentName}}Props {}
 
-const {{pascalCase componentName}}: FunctionComponent<PropsType> = (props) => (
-	<div className="{{camelCase componentName}}">
-		{{pascalCase componentName}}
-	</div>
-);
+const {{pascalCase componentName}}: FunctionComponent<{{pascalCase componentName}}Props> = (props) => {
+	return <div className="{{camelCase componentName}}">{{pascalCase componentName}}</div>;
+}
 
 export default {{pascalCase componentName}};
