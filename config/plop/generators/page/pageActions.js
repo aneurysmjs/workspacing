@@ -4,7 +4,7 @@ import { APPS, TEMPLATES } from '../../../paths.js';
  * @param {string} componentApp
  * @param {string} componentModule
  */
-const resolvePageDestination = (componentApp, componentModule) => {
+export const resolvePageDestination = (componentApp, componentModule) => {
   return `${APPS}/${componentApp}/src/modules/${componentModule}/pages`;
 };
 

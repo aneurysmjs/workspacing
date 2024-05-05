@@ -6,7 +6,7 @@ import { capitalize } from '../../plopUtils.js';
  * @param {string} componentModule
  * @param {string} componentName
  */
-const resolveComponentDestination = (componentApp, componentModule, componentName) => {
+export const resolveComponentDestination = (componentApp, componentModule, componentName) => {
   const capitalizedComponentName = capitalize(componentName);
 
   return `${APPS}/${componentApp}/src/modules/${componentModule}/components/${capitalizedComponentName}`;

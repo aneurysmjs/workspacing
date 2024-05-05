@@ -2,10 +2,12 @@ import type { FunctionComponent } from 'react';
 
 import './{{pascalCase pageName}}Page.css';
 
-export const {{pascalCase pageName}}Page: FunctionComponent = () => (
-	<div>
-		{{pascalCase pageName}} page
-	</div>
-);
+export const {{pascalCase pageName}}Page: FunctionComponent = () => {
+	return (
+		<div>
+			{{pascalCase pageName}} page
+		</div>
+	);
+}
 
 export default {{pascalCase pageName}}Page;

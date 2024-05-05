@@ -1,14 +1,14 @@
 import { TEMPLATES, APPS } from '../../../paths.js';
 
+import { resolveComponentDestination } from '../component/componentActions.js';
+import { resolvePageDestination } from '../page/pageActions.js';
+
 /**
  * @param {string} componentApp
  * @param {string} componentModule
- * @param {string} componentName
  */
 const resolveModuleDestination = (componentApp, moduleName) => {
-  const capitalizedModuleName = capitalize(moduleName);
-
-  return `${APPS}/${componentApp}/src/modules/${capitalizedModuleName}`;
+  return `${APPS}/${componentApp}/src/modules/${moduleName}`;
 };
 
 /**
@@ -28,9 +28,29 @@ export default function moduleActions({ componentApp, moduleName }) {
       base: `${TEMPLATES}/module`,
       templateFiles: `${TEMPLATES}/module/**`,
       stripExtensions: ['plop'],
-      destination: `${APPS}/${componentApp}/src/modules/${moduleName}`,
+      destination: resolveModuleDestination(componentApp, moduleName),
       data: {
         moduleName,
+      },
+    },
+    {
+      type: 'addMany',
+      base: `${TEMPLATES}/component`,
+      templateFiles: `${TEMPLATES}/component/**`,
+      stripExtensions: ['plop'],
+      destination: resolveComponentDestination(componentApp, moduleName, moduleName),
+      data: {
+        componentName: moduleName,
+      },
+    },
+    {
+      type: 'addMany',
+      base: `${TEMPLATES}/page`,
+      templateFiles: `${TEMPLATES}/page/**`,
+      stripExtensions: ['plop'],
+      destination: resolvePageDestination(componentApp, moduleName),
+      data: {
+        pageName: moduleName,
       },
     },
   ];
