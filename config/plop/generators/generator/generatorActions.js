@@ -4,6 +4,8 @@ import { GENERATORS, TEMPLATES } from '../../../paths.js';
  * @typedef {import('plop').AddActionConfig} AddActionConfig
  */
 
+const templateWithHelper = "{{appendHelper 'camelCase' (camelCase templateName) 'Name'}}";
+
 /**
  * @param {Object} answers
  * @param {string} answers.generatorName
@@ -25,8 +27,8 @@ export default function plopActions({ generatorName, templateName }) {
     },
     {
       type: 'add',
-      path: `${TEMPLATES}/${templateName}/${templateName}.plop`,
-      template: `{{doubleCurlyMe ('foo')}}`,
+      path: `${TEMPLATES}/${templateName}/${templateWithHelper}.plop`,
+      template: templateWithHelper,
       data: {
         templateName,
       },

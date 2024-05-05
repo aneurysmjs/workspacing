@@ -5,8 +5,6 @@ import routeGenerator from './generators/route/routeGenerator.js';
 import layoutGenerator from './generators/layout/layoutGenerator.js';
 import generatorGenerator from './generators/generator/generatorGenerator.js';
 
-// console.log('helpers', helpers);
-
 /**
  * @typedef {import('plop').NodePlopAPI} NodePlopAPI
  */
