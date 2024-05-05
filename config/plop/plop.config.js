@@ -4,6 +4,7 @@ import moduleGenerator from './generators/module/moduleGenerator.js';
 import routeGenerator from './generators/route/routeGenerator.js';
 import layoutGenerator from './generators/layout/layoutGenerator.js';
 import generatorGenerator from './generators/generator/generatorGenerator.js';
+import pageGenerator from './generators/page/pageGenerator.js';
 
 /**
  * @typedef {import('plop').NodePlopAPI} NodePlopAPI
@@ -24,4 +25,5 @@ export default function plopFn(plop) {
   plop.setGenerator('route', routeGenerator);
   plop.setGenerator('layout', layoutGenerator);
   plop.setGenerator('generator', generatorGenerator);
+  plop.setGenerator('page', pageGenerator);
 }

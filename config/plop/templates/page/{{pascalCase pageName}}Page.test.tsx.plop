@@ -1,0 +1,12 @@
+import { render } from '@testing-library/react';
+
+import {{suffixMe (pascalCase pageName) 'Page'}} from './{{pascalCase pageName}}Page';
+
+describe('{{pascalCase pageName}} page', () => {
+	it('should have "{{pascalCase pageName}} page" as textContent', () => {
+		const { container } = render(<{{pascalCase pageName}}Page />);
+		const div = container.firstChild as HTMLDivElement;
+
+		expect(div.textContent).toEqual('{{pascalCase pageName}} page');
+	});
+});
